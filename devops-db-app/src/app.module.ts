@@ -8,8 +8,8 @@ import { DogsModule } from './dogs/dogs.module';
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: 'mysql',
-    host: 'db',
-    port: 3306,
+    host: 'localhost',
+    port: 3307,
     username: 'admin',
     password: 'passw0rd',
     database: 'database',
