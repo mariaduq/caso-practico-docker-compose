@@ -8,11 +8,11 @@ import { DogsModule } from './dogs/dogs.module';
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: 'mysql',
-    host: 'localhost',
-    port: 3307,
-    username: 'admin',
-    password: 'passw0rd',
-    database: 'database',
+    host: process.env.DATABASE_HOST,
+    port: +process.env.DATABASE_PORT,
+    username: process.env.DATABASE_USERNAME,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE_NAME,
     entities: [Dog],
     synchronize: true
   }), DogsModule],
